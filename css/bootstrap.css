@@ -577,6 +577,17 @@ pre code {
   }
 }
 
+@media screen and (max-width: 667px) {
+    body {
+        overflow-x: hidden !important;
+    }
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
+
 .container-fluid {
   width: 100%;
   padding-right: 15px;
