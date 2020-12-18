@@ -214,8 +214,8 @@
                         <div class="element-item design">
                             <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>LunchLinks</span></div><img src="img/lunchlink.jpg" alt="alternative"></a>
                         </div>
-
-                        <div class="element-item data">
+                        
+                        <!-- <div class="element-item data">
                             <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Happiness Index Project</span></div><img src="images/project-5.jpg" alt="alternative"></a>
                         </div>
                         <div class="element-item data">
@@ -226,7 +226,7 @@
                         </div>
                         <div class="element-item data">
                             <a class="popup-with-move-anim" href="#project-8"><div class="element-item-overlay"><span>Patient Portal</span></div><img src="images/project-8.jpg" alt="alternative"></a>
-                        </div>
+                        </div> -->
                         
                     </div> <!-- end of grid -->
                     <!-- end of filter -->
@@ -254,7 +254,7 @@
                 <p>I applied gradient boosting, and initially found a 63% accuracy. I decided to reduce the number of fire size classes from 7 to 3 (small, medium, and large). The model’s accuracy improved to nearly 80% after fine tuning parameters to find the best learning rate, max_features, and max_depth! I applied cross-validation to ensure overfitting was not occurring.</p>
 
                 <div class="text-center">
-                    <img class="w-35" class="img-fluid" src="projects/confusionmatrix.png" alt="confusion matrix of fire size classes">
+                    <img class="w-50" class="img-fluid" src="projects/confusionmatrix.png" alt="confusion matrix of fire size classes">
                 </div>
 
                 <p>Upon closer inspection, however, I discovered that while the model performed well on small fires, it performed quite poorly on medium and large fires. This accuracy of 80% was weighted based on the large amount of small fires in the dataset. The features listed earlier were not sufficient to consistently predict fire size. In the future, adding weather variables and obtaining more data for larger fires would be helpful to train our model.</p>
@@ -427,20 +427,51 @@
     <div id="project-5" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-5.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Joy Moments</h3>
+
+            <div class="col-lg">
+                <h3>World Happiness Index</h3>
+                <h5>Spring 2020 | Regression/Forecasting Course Project</h6>
                 <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <h6>Tools: R, Minitab</h6>
+                <p> What determines if an individual is happy or not? Though happiness is not quantifiable, the <a href="https://worldhappiness.report/ed/2019/" target="_blank">World Happiness Report</a> attempts to create a “happiness index” which ranks countries based on independent variables like health, ecological diversity and resilience, psychological well being, community vitality, living standard, and education.</p>
+                
+                <p>My team decided to create a model with a different set of independent variables from the World Happiness Report to <strong>predict the happiness index of a country</strong>. Using World Bank's DataBank and various other online databases, we gathered data for 15 development indicators (e.g. GDP, education expenditure, life expectancy) in a total of 138 countries.</p>
+
+                <p>We used <strong>backward elimination, stepwise regression, and best subsets to determine a model that passed assumptions checks and residual analysis</strong>. We also tried adding higher order and interaction terms to identify the best model.</p>
+
+                <p>I performed analysis in R to find outliers, high leverage points, and influential points that could be affecting our chosen model. 17 countries were outliers with respect to their x and/or y values and/or were influential. We decided only to remove the country Saudi Arabia because it was influential according to its Cook’s Distance and Difference in Fits values and outlying with respect to both its x and y value.</p>
+
+                <p>After removing the outlier, we produced our final model with stepwise regression and squared terms. The normality and independence assumptions were met. Finally, we tested the accuracy of our model prediction on a random sample of 5 countries separate from the training set. With a mean absolute percentage error (MAPE) of 9.237%, <strong>we believe that our model is reliable in predicting the happiness index for most countries.</strong></p>
+
+
+                <div class="text-center">
+                    <img class="w-75" class="img-fluid" src="projects/happy/equation.png" alt="final regression equation">
+                </div><br>
+
+                <div class="row">
+                    <div class="col-lg-6 text-right">
+                        <img class="w-100" class="img-fluid" src="projects/happy/coeff.png" alt="coefficients in minitab">
+                    </div>
+
+                    <div class="col-lg-6 text-left">
+                        <img class="w-100" class="img-fluid" src="projects/happy/anova.png" alt="analysis of variance (anova) in minitab">
+                    </div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-lg-6 text-right">
+                        <img class="w-100" class="img-fluid" src="projects/happy/probplot.png" alt="the probability plot of our final regression equation">
+                    </div>
+
+                    <div class="col-lg-6 text-left">
+                        <img class="w-100" class="img-fluid" src="projects/happy/residplot.png" alt="the residual plot of our final regression equation">
+                    </div>
+                </div><br>
+
+                <p>I learned how to familiarize myself with R for a project that didn't start out with clean data or a definite answer waiting at the end of my calculations. It was my first time going through an iterative process to find the "best" answer. Though our final model met all the error assumptions, we certainly would have benefited from more data. In the future, we could incorporate a time study to identify how a country's happiness index fluctuates through the years. Also, the Happiness Report is a really interesting read and worth checking it out!</p>
+
+
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
