@@ -30,8 +30,8 @@
 	<link href="css/styles.css" rel="stylesheet">
 	
 	<!-- Favicon  / TODO Adrianna add your own logo here !! -->
-<!--     <link rel="icon" href="images/favicon.png">
- -->
+    <link rel="icon" href="img/favicon.png">
+
 
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
@@ -202,31 +202,30 @@
                     </div> <!-- end of button group-->                    
                     
                     <div class="grid">
-                        <div class="element-item data">
-                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Predicting Fire Size</span></div><img src="img/fire.jpg" alt="alternative"></a>
-                        </div>
-                        <div class="element-item data design">
+                        <div class="element-item design data">
                             <a class="popup-with-move-anim" href="#project-2"><div class="element-item-overlay"><span>Spotify's Top Artists</span></div><img src="img/music.jpg" alt="alternative"></a>
                         </div>
-                        <div class="element-item design sus design">
+                        <div class="element-item sus design">
                             <a class="popup-with-move-anim" href="#project-3"><div class="element-item-overlay"><span>Carbon Reduction Challenge</span></div><img src="img/trees.jpg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item data">
+                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Predicting Fire Size</span></div><img src="img/fire.jpg" alt="alternative"></a>
                         </div>
                         <div class="element-item design">
                             <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>LunchLinks</span></div><img src="img/lunchlink.jpg" alt="alternative"></a>
                         </div>
-
-                        <!-- <div class="element-item data">
-                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Happiness Index Project</span></div><img src="images/project-5.jpg" alt="alternative"></a>
+                        <div class="element-item data">
+                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>World Happiness Index</span></div><img src="img/world.jpg" alt="alternative"></a>
                         </div>
                         <div class="element-item data">
-                            <a class="popup-with-move-anim" href="#project-6"><div class="element-item-overlay"><span>Restaurant Reservation</span></div><img src="images/project-6.jpg" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-6"><div class="element-item-overlay"><span>Restaurant Reservation</span></div><img src="img/restaurant.jpg" alt="alternative"></a>
                         </div>
                         <div class="element-item sus">
-                            <a class="popup-with-move-anim" href="#project-7"><div class="element-item-overlay"><span>Drones for Package Delivery</span></div><img src="images/project-7.jpg" alt="alternative"></a>
+                            <a class="popup-with-move-anim" href="#project-7"><div class="element-item-overlay"><span>Drones for Package Delivery</span></div><img src="img/drone.jpg" alt="alternative"></a>
                         </div>
-                        <div class="element-item data">
-                            <a class="popup-with-move-anim" href="#project-8"><div class="element-item-overlay"><span>Patient Portal</span></div><img src="images/project-8.jpg" alt="alternative"></a>
-                        </div> -->
+                        <div class="element-item data sus">
+                            <a class="popup-with-move-anim" href="#project-8"><div class="element-item-overlay"><span>On-Time Buses</span></div><img src="img/bus.jpg" alt="alternative"></a>
+                        </div>
                         
                     </div> <!-- end of grid -->
                     <!-- end of filter -->
@@ -249,7 +248,7 @@
                 <h5>Fall 2020 | Machine Learning Course Project</h6>
                 <hr class="line-heading">
                 <h6>Tools: Python, Jupyter Notebook</h6>
-                <p>Wildfires have been running rampant in the West coast, causing tremendous amounts of damage to forestland, wildlife, and property. Using a <a href="https://www.kaggle.com/rtatman/188-million-us-wildfires" target="_blank">Kaggle dataset</a> with features including longitude, latitude, cause of fire, discovery and containment date, and fire size, my team of five set out to discover whether we could predict the fire size class from the other features.</p>
+                <p>Wildfires have been running rampant in the West coast, causing tremendous amounts of damage to forestland, wildlife, and property. Using a <a href="https://www.kaggle.com/rtatman/188-million-us-wildfires" target="_blank">Kaggle dataset</a> with features including longitude, latitude, cause of fire, discovery and containment date, and fire size, my team of five set out to discover <strong>whether we could predict the fire size class from the other features.</strong></p>
                 <p>After a bit of data cleansing and creation of a fire duration variable, my team tackled a few different machine learning tactics, from neural networks to multiple regression.</p>
                 <p>I applied gradient boosting, and initially found a 63% accuracy. I decided to reduce the number of fire size classes from 7 to 3 (small, medium, and large). The model’s accuracy improved to nearly 80% after fine tuning parameters to find the best learning rate, max_features, and max_depth! I applied cross-validation to ensure overfitting was not occurring.</p>
 
@@ -257,7 +256,7 @@
                     <img class="w-50" class="img-fluid" src="projects/confusionmatrix.png" alt="confusion matrix of fire size classes">
                 </div>
 
-                <p>Upon closer inspection, however, I discovered that while the model performed well on small fires, it performed quite poorly on medium and large fires. This accuracy of 80% was weighted based on the large amount of small fires in the dataset. The features listed earlier were not sufficient to consistently predict fire size. In the future, adding weather variables and obtaining more data for larger fires would be helpful to train our model.</p>
+                <p>Upon closer inspection, however, I discovered that <strong>while the model performed well on small fires, it performed quite poorly on medium and large fires</strong>. This accuracy of 80% was weighted based on the large amount of small fires in the dataset. The features listed earlier were not sufficient to consistently predict fire size. In the future, adding weather variables and obtaining more data for larger fires would be helpful to train our model.</p>
                 <p>For more details, visit our <a href="https://terrenceshi.github.io/CS4641/" target="_blank">GitHub page!</a></p>
 
 
@@ -277,16 +276,16 @@
                 <h5>Fall 2020 | Information Visualization Course Project</h6>
                 <hr class="line-heading">
                 <h6>Tools: D3.js, JavaScript, HTML, CSS</h6>
-                <p>We chose to explore the top 2000 songs released on Spotify of all time (1956 to 2019) using a  <a href="https://www.kaggle.com/iamsumat/spotify-top-2000s-mega-dataset" target="_blank">Kaggle dataset</a> that extracted features like energy, danceability, valence, accousticness, beats per minute (BPM), and many more from the Spotify API.</p>
+                <p>My team chose to explore the top 2000 songs released on Spotify of all time (1956 to 2019) using a  <a href="https://www.kaggle.com/iamsumat/spotify-top-2000s-mega-dataset" target="_blank">Kaggle dataset</a> that extracted features like energy, danceability, valence, accousticness, beats per minute (BPM), and many more from the Spotify API.</p>
 
                 <div class="text-center">
                     <img class="w-100" class="img-fluid" src="projects/spotify/spotify.png" alt="visualizing spotify's top artists and their songs">
                 </div>
 
 
-                <p><br>The main bar chart is a ranking of the most popular artists ordered by the number of songs an artist produced that broke the top 2000. We linked the visualizations on the right to show details for a selected artist. The top right bar chart updates to show all of the selected artist’s songs in the top 2000, in descending order by popularity. The parallel coordinate plot below shows each song as a line, allowing users to view song features and compare the music of a single artist. Hovering over a line shows a tooltip with the song name.</p>
-
-<!--                 <div class="row">
+                <p><br>The main bar chart is a ranking of the most popular artists ordered by the number of songs an artist produced that broke the top 2000. We linked the visualizations on the right to show details for a selected artist. The top right bar chart updates to show all of the selected artist’s songs in the top 2000, in descending order by popularity. The parallel coordinate plot below shows each song as a line, allowing users to view song features and compare the music of a single artist. Hovering over a line reveals the song name in a tooltip.</p>
+<!-- 
+                <div class="row">
                     <div class="col-lg-6 text-right">
                         <img class="w-100" class="img-fluid" src="projects/spotify/topsongs.png" alt="visualizing spotify's top artists and their songs">
                     </div>
@@ -296,7 +295,7 @@
                     </div>
                 </div><br>
  -->
-                <p>Our team enjoyed exploring the top artists and their songs on Spotify while creating this visualization. This was my first experience using D3.js, and I think I’m hooked by the simplicity and beauty of creating data visualizations with the JavaScript library. Here’s our team giving a <a href="https://youtu.be/xN3smXvso0k">demo of our visualization!</a></p>
+                <p>I enjoyed exploring the top artists and their songs on Spotify while creating this visualization. This was my first experience using D3.js, and I think I’m hooked by the simplicity and beauty of creating data visualizations with the JavaScript library. Here’s my team giving a <a href="https://youtu.be/xN3smXvso0k" target="_blank">demo of our visualization!</a></p>
 
 
 
@@ -318,21 +317,21 @@
                 <hr class="line-heading">
                 <h6>Tools: Microsoft Excel, Adobe Photoshop, Canva</h6><br>
 
-                <p>I was thrilled to work at a company with a dedicated sustainability department. My role in Healthcare IT was far from carbon reporting, but I seized an opportunity to work with Georgia Tech faculty and identify areas of carbon reduction at UPS. I determined two main areas of carbon reduction (and cost savings), and presented these findings to UPS Sustainability.</p><br>
+                <p>I was thrilled to work at a company with a dedicated sustainability department. My actual role in Healthcare IT was far from carbon reporting, but I seized an opportunity to work with Georgia Tech faculty and identify areas of carbon reduction at UPS. <strong>I determined two main areas of carbon reduction (and cost savings), and presented these findings to UPS Sustainability</strong>.</p><br>
 
                 <div class="text-center">
                     <img class="w-50" class="img-fluid" src="projects/crc/summary.png" alt="laptop mockup of ups.com shipping options">
                 </div>
 
                 <h6 style="color:#14bf98">Work from Home (WFH)</h6>
-                <p>I sent out and analyzed two surveys on the commute of UPS employees, and calculated the carbon emissions savings from telecommuting. With information including car year, make, and model, daily commute mileage on highway and city roads, and WFH behavior, I captured the carbon and cost savings for Atlanta-based UPSers. Most employees surveyed preferred WFH 4 days/week post-COVID, which I recommended after modeling the savings for other WFH models. This structure best captures co-benefits of avoiding a commute and still offers weekly office collaboration. A fun find from my survey was that the majority of surveyed workers experienced no change or better productivity and performance working from home.</p>
+                <p>I sent out and analyzed two surveys on the commute of UPS employees, and calculated the <strong>carbon emissions savings from telecommuting</strong>. With information including car year, make, and model; daily commute mileage on highway and city roads; and WFH behavior, I captured the carbon and cost savings for Atlanta-based UPSers. Most employees surveyed preferred WFH 4 days/week post-COVID, which I recommended after calculating the savings for other WFH models. This structure best captures the co-benefits of avoiding a commute and still offers weekly office collaboration. A fun find from my survey was that <strong>the majority of surveyed workers experienced no change or better productivity and performance working from home</strong>.</p>
 
                 <div class="text-center">
                     <img class="w-75" class="img-fluid" src="projects/crc/workchanges.png" alt="laptop mockup of ups.com shipping options">
                 </div>
 
                 <br><h6 style="color:#14bf98">Promote UPS.com Ground Shipping</h6>
-                <p>On UPS.com, customers can enter information on package volume, origin, and destination to ship their items. The default shipping option is air, which is costly for customers and produces much more carbon than ground shipping. As a step to reduce emissions across UPS operations, ground shipping should be denoted as “Most Sustainable” and/or be the recommended option. Below is a mockup I created of the website.</p>
+                <p>On UPS.com, customers ship their items by entering information on package volume, origin, and destination. The default shipping option is air, which is costly for customers and produces much more carbon than ground shipping. As a step to reduce emissions across UPS operations, <strong>ground shipping should be denoted as “Most Sustainable”</strong> and/or be the recommended option. Below is a mockup I created of the website.</p>
 
                 <div class="text-center">
                     <img class="w-35" class="img-fluid" src="projects/crc/laptopmockup.png" alt="laptop mockup of ups.com shipping options">
@@ -341,7 +340,7 @@
                     <img class="w-75" class="img-fluid" src="projects/crc/mockup.png" alt="close up of ups.com shipping options mockups">
                 </div>
 
-                <p>I earned an Honorable Mention for my research and calculations from the Carbon Reduction Challenge judges, and got to learn from/connect with many UPSers who value sustainability in operations!</p>
+                <p>I earned an Honorable Mention for my research and calculations from the Carbon Reduction Challenge judges, and got to learn from and connect with many UPSers who value sustainability in operations!</p>
                 <p>Learn more about the <a href="https://www.carbonreductionchallenge.org/" target="_blank">Carbon Reduction Challenge</a>!</p>
 
                 <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
@@ -360,7 +359,7 @@
                 <h5>Fall 2020 | Human-Computer Interaction Course Project</h6>
                 <hr class="line-heading">
                 <h6>Tools: Figma, Miro</h6>
-                <p>My team of five tackled the issue of lack of social interaction during the COVID-19 pandemic. It was my first time undergoing the typical design process, as outlined below. We wanted to bring back “face-to-face” meals under the guise of professional networking. Our project encouraged human interaction over meals and focused on the mentorship aspect of career-building. The result of our semester-long research and iterative design process? Enter LunchLinks: a LinkedIn-like networking site where in order to connect with someone, you must share a meal with them over a video call.</p>
+                <p>My team of five tackled the issue of lack of social interaction during the COVID-19 pandemic. It was my first time undergoing the typical design process, as outlined below. We wanted to bring back “face-to-face” meals under the guise of professional networking. Our project encouraged human interaction over meals and focused on the mentorship aspect of career-building. What was the result of our semester-long research and iterative design process? Enter LunchLinks: a LinkedIn-like networking site where in order to connect with someone, you must share a meal with them over a video call.</p>
                 <p>Our primary stakeholders were students and working professionals. We surveyed, interviewed, and observed our stakeholder groups to understand the issue better. Following this research portion, we created personas and developed design criteria.</p>
 
                 <div class="text-center">
@@ -414,7 +413,8 @@
                 </div><br>
 
 
-                <p>LunchLinks: Bring back the social aspect of eating meals through networking.</p>
+                <p><strong>LunchLinks: Bring back the social aspect of eating meals through networking.</strong></p>
+                <p>I began to think about small UI/UX details and appreciate the research and design that make the tools around me so easy to use. This project also got me thinking about more problems in the world I'd like to tackle. I hope to continue engaging in the design process in the future!</p>
 
 
                 <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
@@ -439,7 +439,7 @@
 
                 <p>We used <strong>backward elimination, stepwise regression, and best subsets to determine a model that passed assumptions checks and residual analysis</strong>. We also tried adding higher order and interaction terms to identify the best model.</p>
 
-                <p>I performed analysis in R to find outliers, high leverage points, and influential points that could be affecting our chosen model. 17 countries were outliers with respect to their x and/or y values and/or were influential. We decided only to remove the country Saudi Arabia because it was influential according to its Cook’s Distance and Difference in Fits values and outlying with respect to both its x and y value.</p>
+                <p>I performed analysis in R to find outliers, high leverage points, and influential points that affect our chosen model. 17 countries were outliers with respect to their x and/or y values and/or were influential. We decided only to remove the country Saudi Arabia because it was influential according to its Cook’s Distance and Difference in Fits values and outlying with respect to both its x and y value.</p>
 
                 <p>After removing the outlier, we produced our final model with stepwise regression and squared terms. The normality and independence assumptions were met. Finally, we tested the accuracy of our model prediction on a random sample of 5 countries separate from the training set. With a mean absolute percentage error (MAPE) of 9.237%, <strong>we believe that our model is reliable in predicting the happiness index for most countries.</strong></p>
 
@@ -481,20 +481,31 @@
     <div id="project-6" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-6.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Spark Events</h3>
+
+            <div class="col-lg">
+                <h3>Restaurant Reservation</h3>
+                <h5>Spring 2019 | Database Systems Course Project</h6>
                 <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <h6>Tools: PostgreSQL, NodeJS, Bootstrap</h6>
+                <p>Restaurant Reservation is a web app for two types of users: customers, who make reservations at and leave reviews for restaurants, and owners, who manage restaurant branches, respond to reviews, and respond to reservations. Using triggers and SQL queries, my team added scheduling and capacity constraints and features like average restaurant rating and reward redemption.</p>
+                <p>I helped design the ER diagram, generate data for our database, write queries, and implement incentives in the web app. Below are some screenshots of the application in action!</p>
+
+                <div class="text-center">
+                    <img class="w-75" class="img-fluid" src="projects/restaurant/welcome.png" alt="final regression equation">
+                </div><br>
+                <div class="text-center">
+                    <img class="w-75" class="img-fluid" src="projects/restaurant/signup.png" alt="final regression equation">
+                </div><br>
+                <div class="text-center">
+                    <img class="w-75" class="img-fluid" src="projects/restaurant/reservations.png" alt="final regression equation">
+                </div><br>
+
+                <p>Customers can easily reserve a spot at a restaurant without making a phone call and restaurants can better anticipate demand. This was my first time building both the back and front end of an application, and it was rewarding to see the project come together over a few late nights and meetings with the professor. Now, if you'll excuse me—I have a reservation to make!</p>
+
+                <p>For more details, visit the <a href="https://github.com/ZhengQY421/RestaurantReservation" target="_blank">GitHub repository!</a></p>
+
+
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -504,43 +515,63 @@
     <div id="project-7" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-7.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Casual Wear</h3>
+
+            <div class="col-lg">
+                <h3>Implications of Using Drones for Package Delivery</h3>
+                <h5>Spring 2020 | Energy, Efficiency, & Sustainability Course Project</h6>
                 <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+                <h6>Tools: G Suite, MS Suite</h6>
+                <p>This project was an <strong>analysis of the environmental impact of moving from truck to drone-based last-mile package delivery for UPS in Midtown Atlanta.</strong> It was research heavy as we used representative values derived from previous studies on the topic, news sources, and company websites. For the drone delivery system, we used the following model:</p>
+
+                <div class="text-center">
+                    <img class="w-50" class="img-fluid" src="projects/drone/model.jpg" alt="confusion matrix of fire size classes">
+                </div><br>
+
+                <p>I calculated the truck energy by modeling the delivery route as a traveling salesman problem, using the average MPG for a conventional UPS truck, and normalizing the manufacturing energy over the total number of trips a truck drives in its lifetime. Then, I found the GHG emissions (in carbon dioxide equivalent) based on the total ton-miles the truck travels during its lifetime.</p>
+
+                <div class="row">
+                    <div class="col-lg-6 text-right">
+                        <img class="w-100" class="img-fluid" src="projects/drone/energy.png" alt="the probability plot of our final regression equation">
+                    </div>
+
+                    <div class="col-lg-6 text-left">
+                        <img class="w-100" class="img-fluid" src="projects/drone/emissions.png" alt="the residual plot of our final regression equation">
+                    </div>
+                </div><br>
+
+                <p>Another group member calculated the energy and emission for drone delivery. We found that <strong>using drones to deliver packages from a UPS store takes about half of the energy compared to using a delivery truck. However, the greenhouse gas (GHG) emissions are greater for drone delivery system than the traditional delivery truck system.</strong> Based on our sensitivity analysis, our results could swing to favor drones in the case of GHG emissions, while the energy consumption is almost always less for drones.</p>
+
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
     <!-- end of lightbox -->
 
+
     <!-- Lightbox -->
     <div id="project-8" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-8.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Zazoo Apps</h3>
+
+            <div class="col-lg">
+                <h3>On-Time Buses</h3>
+                <h5>Spring 2020 | Vertically Integrated Project with the <a href="https://sam.isye.gatech.edu/" target="_blank">Socially Aware Mobility (SAM) Lab</a></h6>
                 <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
+                <h6>Tools: Python, Jupyter Notebook</h6>
+                <p>Analyzing data from MARTA, Atlanta's public transit system, I set out to understand the on-time performance (OTP) of three heavily used bus routes. To define OTP more specifically, on-time refers to when the bus departs between 1 minute before and 5 minutes after the scheduled time. Time difference distributions for each route were visualized using Python libraries (NumPy, pandas, plotly) and Jupyter Notebook.</p>
+
+                <p>Let's take a closer look at the time difference distribution for Route 5 on a weekday.</p>
+
+                <div class="text-center">
+                    <img class="w-75" class="img-fluid" src="projects/timediff.png" alt="confusion matrix of fire size classes">
                 </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+
+                <p>It's clear that there are a few outliers, and it seems like the buses running on this route display quite the range of time difference between the scheduled and actual departure time! This range is the largest in the afternoon, so riders may have difficulty catching buses on this route at the listed time. On average, buses are 1.6 minutes late, and are on time 68.9% of the time.</p>
+
+                <p>Future work includes identifying the reason for outlying values instead of just visualizing them, and understanding the context of that data. Maybe some of the bus stops are in high traffic areas, or next to an unpredictable traffic light. This project would benefit from more in-depth geographic analysis, which is what the SAM lab continues to tackle in its dedication to solve the first/last mile problem and reduce traffic congestion!</p>
+
+
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
