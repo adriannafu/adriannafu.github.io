@@ -773,13 +773,17 @@ input[type='checkbox'] {
 /*********************/
 .header {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/b8.jpg') center center no-repeat;
+	height:100%;
+	background-position: center;
+	background-repeat: no-repeat;
 	background-size: cover;
 }
 
 .header .header-content {
-	padding-top: 8rem;
+	padding-top: 10rem;
 	padding-bottom: 2.125rem;
 	text-align: center;
+
 }
 
 .header .text-container {
